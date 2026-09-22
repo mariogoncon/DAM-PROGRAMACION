@@ -1,1 +1,19 @@
 Creando un texto de ejemplo en el mismo repositorio nuevo.
+
+
+Ejemplo de comentarios:
+
+    // Para comentar algo breve en 1 línea
+
+    /*
+    Este comentario es para varias líneas
+    */
+
+    //TODO tarea pendiente lunes
+    tareas pendientes para encontrar de manera rápida
+
+Comentario de documentación a través de la herramienta java.doc
+
+    /**
+    *
+    */
