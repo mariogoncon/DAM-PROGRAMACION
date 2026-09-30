@@ -18,6 +18,8 @@ public class Ejercicio7 {
         System.out.print("Introduce tu edad: ");
         int edad = input.nextInt();
 
+        input.close();
+
         System.out.println("¡Hola! Me llamo "+nombre+" "+apellidos+".");
         System.out.println("Tengo "+edad+" años y vivo en Madrid");
 

@@ -11,7 +11,7 @@ public class Ejercicio9 {
         String nombre = ("Auriculares Bluetooth");
         double precio = 29.99;
         String codigo = ("AUR-2023");
-        Boolean disponibilidad = true;
+        boolean disponibilidad = true;
 
         System.out.println("");
         System.out.println("INFORMACIÓN DEL PRODUCTO");
