@@ -12,6 +12,7 @@ public class Player {
         this.salud=20;
         this.resistencia=30;
 
+
     }
 
     public Player(String nombre, String categoria, String poder, int nivel, int salud, int resistencia) {
