@@ -27,6 +27,11 @@ public class Ejercicio7 {
         int num1Cubo = numeroPrimerdig*numeroPrimerdig*numeroPrimerdig;
         int numeroSegundodig = (numero / 10)%10;
         int num2Cubo = numeroSegundodig*numeroSegundodig*numeroSegundodig;
+        /*
+        Alternativa para elevar a un número: Math.pow(numeroPrimerdig,3)
+        la primera variable (numeroPrimerdig) es un int, y Math.pow devuelve un double, por lo que hay que castear
+        la operacion entera a (int)
+         */
         int numeroTercerdig = numero % 10;
         int num3Cubo = numeroTercerdig*numeroTercerdig*numeroTercerdig;
 
