@@ -1,6 +1,6 @@
-import java.awt.desktop.SystemSleepEvent;
+package ejerciciosif;
+
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class Ejercicio2 {
 

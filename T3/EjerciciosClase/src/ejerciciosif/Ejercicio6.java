@@ -1,3 +1,5 @@
+package ejerciciosif;
+
 import java.util.Scanner;
 
 /*
