@@ -52,10 +52,16 @@ public class Banco {
 
     public void ingresarDinero(double saldoIngreso, int pin, String titular) throws NullPointerException {
 
-        if (cuenta != null && cuenta.getPin()==pin && cuenta.getTitular().equalsIgnoreCase(titular)){
+        try {
 
-        } else {
-            System.out.println("Datos erróneos, acceso denegado.");
+            if (cuenta != null && cuenta.getPin()==pin && cuenta.getTitular().equalsIgnoreCase(titular)){
+                //ingresar dinero
+
+            } else {
+                System.out.println("Datos erróneos, acceso denegado.");
+            }
+        } catch (NullPointerException e) {
+            System.out.println("No hay cuenta asociada en el banco");
         }
 
     }

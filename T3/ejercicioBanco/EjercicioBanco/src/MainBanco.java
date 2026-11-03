@@ -18,6 +18,8 @@ public class MainBanco {
             System.out.println("No hay cuenta del banco");
         }
 
+        bbva.ingresarDinero(1000, 111,"Mario");
+
 
 
     }
