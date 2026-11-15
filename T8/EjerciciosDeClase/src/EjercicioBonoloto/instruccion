@@ -3,3 +3,70 @@ EJERCICIO DE BONOLOTO
 PEDIR AL USUARIO 5 NUMEROS Y COMPROBAR CUANTOS HAN SIDO ACERTADOS (NUMERO Y POSICION)
 
 EL SISTEMA GENERA UN CARTÓN Y EL USUARIO INTRODUCE LOS 5 NUMEROS
+
+RESUMEN DEL EJERCICIO BONOLOTO - JAVA
+===================================
+
+OBJETIVO
+Simular un sorteo de Bonoloto con dos arrays de 5 números entre 1 y 10, sin repetir números. Un acierto requiere que coincidan tanto el número como su posición.
+
+1. CARTÓN DEL SISTEMA
+- Crear un array int[] de 5 posiciones.
+- Recorrerlo con un for.
+- Generar números aleatorios entre 1 y 10 con (int)(Math.random() * 10) + 1.
+- Usar un do-while para evitar repetidos mediante estaNumero().
+- Guardar cada número válido en el array.
+
+2. CARTÓN DEL USUARIO
+- Crear otro array de 5 posiciones.
+- Leer cada número con Scanner.
+- Repetir la petición si está repetido o fuera del rango 1 a 10.
+
+int numeroUsuario;
+do {
+    System.out.print("Dígito " + (i + 1) + ": ");
+    numeroUsuario = lector.nextInt();
+} while (estaNumero(numeroUsuario, cartonUsuario)
+        || numeroUsuario < 1 || numeroUsuario > 10);
+cartonUsuario[i] = numeroUsuario;
+
+IMPORTANTE: No es necesario inicializar numeroUsuario a 0, porque el bloque do se ejecuta al menos una vez y asigna un valor antes de comprobar el while.
+
+3. MÉTODO estaNumero()
+
+public static boolean estaNumero(int numero, int[] carton) {
+    for (int item : carton) {
+        if (numero == item) {
+            return true;
+        }
+    }
+    return false;
+}
+
+El for-each recorre los elementos. Si encuentra el número, devuelve true. Si termina sin encontrarlo, devuelve false. El return false debe quedar fuera del for.
+
+4. COMPROBACIÓN DE ACIERTOS
+
+int acierto = 0;
+for (int i = 0; i < cartonUsuario.length; i++) {
+    if (cartonUsuario[i] == cartonSistema[i]) {
+        acierto++;
+    }
+}
+
+Solo se cuenta un acierto si coinciden número y posición. Por eso basta un único for.
+
+5. CONCEPTOS PRACTICADOS
+- int[]: almacenar números.
+- for: recorrer posiciones.
+- for-each: recorrer elementos.
+- do-while: repetir hasta obtener un valor válido.
+- boolean: representar verdadero o falso.
+- return: devolver un resultado y terminar el método.
+- ||: combinar condiciones alternativas.
+- acierto++: incrementar el contador.
+- Arrays.toString(): mostrar un array.
+- try-catch: gestionar errores.
+
+CONCLUSIÓN
+El ejercicio combina arrays, bucles, condiciones, métodos y validación de datos. Genera un cartón aleatorio sin repetidos, permite introducir otro cartón válido y calcula los aciertos por número y posición.

@@ -1,7 +1,5 @@
 package EjercicioBonoloto;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -14,7 +12,7 @@ public class Main {
             int aleatorio=0;
             do {
 
-                aleatorio = (int)(Math.random()*11);
+                aleatorio = (int)(Math.random()*10)+1;
             } while (estaNumero(aleatorio,cartonSistema));
             cartonSistema[i]=aleatorio;
         }
@@ -23,9 +21,17 @@ public class Main {
             System.out.println("Introduce 5 dígitos");
             int cartonUsuario [] = new int[5];
 
+
+            //RESTRICCIONES: NO SE PUEDEN REPETIR NÚMEROS; NÚMEROS ENTRE 1 Y 10
+
+
             for (int i = 0; i < cartonUsuario.length ; i++) {
-                System.out.print("Dígito "+(i+1)+": ");
-                cartonUsuario[i]= lector.nextInt();
+                int numeroUsuario;
+                do {
+                    System.out.print("Dígito "+(i+1)+": ");
+                    numeroUsuario = lector.nextInt();
+                } while (estaNumero(numeroUsuario, cartonUsuario) || numeroUsuario<1 || numeroUsuario > 10);
+                cartonUsuario[i] = numeroUsuario;
             }
 
             System.out.println();
@@ -54,7 +60,6 @@ public class Main {
             if (numero == item) {
                 return true;
             }
-            return false;
         }
         return false;
     }
