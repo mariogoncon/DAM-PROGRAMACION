@@ -51,6 +51,31 @@ public class Operaciones {
         }
     }
 
+    public void rotarDerecha(){
+        int auxiliar = numeros[numeros.length - 1];
+        for (int i = numeros.length -1; i > 0; i--) {
+            numeros[i]=numeros[i-1];
+        }
+        numeros[0] = auxiliar;
+    }
+
+    public void rotarIzquierda(){
+        int auxiliar = numeros[0];
+        for (int i = 0; i < numeros.length -1; i++) {
+            numeros[i]=numeros[i+1];
+        }
+        numeros[numeros.length -1] = auxiliar;
+    }
+
+    public void invertir(){
+        for (int i = 0; i < numeros.length /2 ; i++) {
+            int auxiliar = numeros[i];
+            numeros[i] = numeros[numeros.length - i - 1];
+            numeros[numeros.length - i - 1] = auxiliar;
+        }
+    }
+
+
     public void ordenar(){
         //INVESTIGAR LOS DIFERENTES METODOS DE ORDENACION
         Arrays.sort(numeros);

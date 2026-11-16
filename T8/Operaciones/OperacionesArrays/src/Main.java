@@ -24,7 +24,8 @@ public class Main {
                 System.out.println("2. Mostrar datos");
                 System.out.println("3. Buscar datos");
                 System.out.println("4. Modificar datos");
-                System.out.println("5. Rotar datos");
+                System.out.println("5. Rotar datos a la derecha");
+                System.out.println("6. Rotar datos a la izquierda");
                 System.out.println("6. Invertir datos");
                 System.out.println("7. Ordenar datos");
                 System.out.println("8. Salir");
@@ -59,13 +60,14 @@ public class Main {
 
                         }
                     }
-                    case 5 -> {}
-                    case 6 -> {}
-                    case 7 -> operaciones.ordenar();
-                    case 8 -> System.out.println("Saliendo...");
+                    case 5 -> operaciones.rotarDerecha();
+                    case 6 -> operaciones.rotarIzquierda();
+                    case 7 -> operaciones.invertir();
+                    case 8 -> operaciones.ordenar();
+                    case 9 -> System.out.println("Saliendo...");
                 }
 
-            } while (opcion != 8);
+            } while (opcion != 9);
 
             sc.close();
 
