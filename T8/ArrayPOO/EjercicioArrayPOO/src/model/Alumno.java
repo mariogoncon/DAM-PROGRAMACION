@@ -58,7 +58,16 @@ public class Alumno {
     public void mostrarDatos(){
         System.out.println("Nombre: " + this.nombre);
         System.out.println("DNI: " + this.dni);
-        System.out.println("Nota: " + this.nota);
+        //CON IF TERNARIO:
+        System.out.println(nota < 0 ? "Sin calificar" : "Nota: "+nota);
+         /* ES IGUAL QUE:
+        if (nota < 0){
+            System.out.println("Sin calificar");
+        } else {
+            System.out.println("Nota: " + this.nota);
+        }
+          */
+
         }
     }
 

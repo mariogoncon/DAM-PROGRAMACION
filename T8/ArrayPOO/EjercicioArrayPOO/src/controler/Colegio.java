@@ -18,6 +18,7 @@ public class Colegio {
     public Colegio(String nombre){
         this.nombre = nombre;
         this.alumnos=new Alumno[5]; // [null, null, null, null, null,]
+
     }
 
     public Colegio(String nombre, int capacidad){
@@ -48,34 +49,40 @@ public class Colegio {
     public void mostrarDatos(){
         System.out.println("nombre = " + nombre);
         System.out.println("Las plazas del colegio son "+alumnos.length);
+        System.out.println();
     }
 
     public boolean inscribirAlumno(Alumno alumno){
         //Puedo inscribir a un alumno si hay hueco (existe un null)
         //Si en ningua posicion hay nulo, no hay hueco
+        //Si el DNI  ya está inscrito, ERROR
 
         for(int i=0;i<alumnos.length;i++){
             if (alumnos[i]==null){
-                alumnos[i]=alumno;
-                return false;
+                if (buscarAlumno(alumno.getDni())==null){
+                    alumnos[i]=alumno;
+                    return true;
+                } else {
+                    break;
+                }
             }
         }
-        System.out.println("No hay plazas para inscribir alumnos nuevos");
         return false;
     }
 
-
-    public void expulsarAlumno(Alumno alumno){
-        for (int i= 0;i<alumnos.length;i++){
-            if (alumnos[i]==alumno){
-                alumnos[i]=null;
-                System.out.println("El alumno "+alumno.getNombre()+" con DNI: "+alumno.getDni()+" se ha expulsado correctamente");
-                return;
+    public boolean expulsarAlumno(String DNI){
+        Alumno expulsar = buscarAlumno(DNI);
+        if (expulsar!=null){
+            for (int i = 0; i < alumnos.length ; i++) {
+                if (alumnos[i].getDni().equalsIgnoreCase(DNI)) {
+                    alumnos[i] = null;
+                    return true;
+                }
             }
         }
-        System.out.println("El alumno no está inscrito");
+        System.out.println("DNI no encontrado");
+        return false;
     }
-
 
     public void ordenarPorNota(){
         for (int i = 0; i < alumnos.length ; i++) {
@@ -91,13 +98,13 @@ public class Colegio {
         }
     }
 
-    public void calificarAlumno(Alumno alumno, double calificacion) throws NotaException {
-        for (int i= 0;i<alumnos.length;i++){
-            if (alumnos[i]==alumno){
-                alumno.setNota(calificacion);
-                return;
-            }
+    public boolean calificarAlumno(String DNI, double nota) throws NotaException {
+        Alumno encontrado = buscarAlumno(DNI);
+        if (encontrado!=null){
+            encontrado.setNota(nota);
+            return true;
         }
+        return false;
     }
 
     public void listarAlumno(){
@@ -108,13 +115,15 @@ public class Colegio {
             }
         }
     }
-    public boolean buscarAlumno(Alumno alumno) {
-        for (Alumno item : alumnos) {
-            if (item == alumno) {
-                System.out.println(item.getNombre());
-                return true;
+
+    public Alumno buscarAlumno(String DNI) {
+        for ( Alumno item : alumnos) {
+            if (item != null && item.getDni().equalsIgnoreCase(DNI)) {
+                return item;
             }
         }
-        return false;
+        return null;
     }
+
+
 }
