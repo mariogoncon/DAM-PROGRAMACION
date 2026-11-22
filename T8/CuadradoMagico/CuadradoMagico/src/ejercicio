@@ -1,0 +1,3 @@
+En este ejercicio se va a programar un cuadrado mágico de 4x4
+Para que un cuadrado sea mágico necesitamos que la suma de todas sus columnas, filas y diagonales sea igual
+En este método se utilizará los ArraysMulti
