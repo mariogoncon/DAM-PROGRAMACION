@@ -1,0 +1,78 @@
+ARRAY -> Conjunto de valores, armario donde se guardan cosas, variable donde se guardan conjunto de valores.
+
+-------------------------------------------- CARACTERÍSTICAS -----------------------------------------------
+
+1.  TAMAÑO: FIJO (estático)
+
+    int [] notas = new int [5]
+
+            > [0] [0] [0] [0] [0]
+
+2.  ASOCIAN ELEMENTOS: INDEXADOS. Asociados a una posición base 0.
+    Si se elimina una posición, ARRAY no mueve ningún elemento.
+
+3.  TAMAÑO DE VECTOR: Propiedad que se saca mediante ".length" -> cuantos elementos tengo.
+
+    int [] nombres = new int [5]
+
+            > 5
+
+4.  FUNCIONALIDADES: No tiene
+
+5.  LIMITACIÓN: El tamaño estático no permite muchas cosas, no se permite agregar ni borrar. Para quitar la limtiación
+                usamos COLLECTIONS
+
+
+COLLECTIONS -> Hay diferentes tipos.
+                        List<> -> ArrayList <>
+
+-------------------------------------------- CARACTERÍSTICAS -----------------------------------------------
+
+1.  TAMAÑO: DINÁMICO
+    ArrayList lista = new ArrayList() ["Mario", "Dayana", "Pepe", "Esteban"]
+
+2.  ASOCIAN ELEMENTOS: Indexados, asociado a una posición base 0.
+    Si se elimina una posición, ARRAYLIST mueve los elementos.
+
+                > ["A", "B", "C", "D", "E"]   |  ["A", "B", "C", "E"]
+                    0    1    2    3    4     |    0    1    2    3
+
+3.  TAMAÑO DE COLECCIÓN: Tamaño actual de la lista
+
+    lista.size()
+
+4.  FUNCIONALIDADES:
+
+    - Añadir un elemento --> lista.add(elemento)
+                             lista.add("Mario")
+                             lista.addFirst("Mario")
+                             lista.addLas("Mario")
+
+
+    - Borrar un elemento -->  lista.delete(posición)
+                              lista.addFirst(elemento)
+
+          > Ante coincidencia (con números por ejemplo) prioriza la posición.
+                        [12, 3, 6, 45, 1] números.delete(1) -> elimina la posición del 3
+                        [12, 3, 6, 45, 1] números.delete(new Integer(1)) -> elimina el número 1
+
+
+    - Obtener un elemento --> lista.get(posición)
+                              lista.getLast (último)
+                              lista.getFirst (primero)
+
+
+    - Cambiar un elemento --> lista.set(Oldvalue, Newvalue)
+
+
+    - Vaciar lista --> lista.clear()
+
+
+    - ¿Ésta lista está vacía? --> lista.isEmpry() --> boolean
+
+5. TIPADO:
+
+    - ArrayList<Integer> lista = new ArrayList()
+    - ArrayList<Double> lista = new ArrayList()
+    - ArrayList<Boolean> lista = new ArrayList()
+    - ArrayList<Alumno> lista = new ArrayList()
