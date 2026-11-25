@@ -16,7 +16,7 @@ public class Cuadrado {
         CONSTRUCTORES
      ------------------------------------------------------*/
     public Cuadrado() {
-        this.matriz = new int [4][4];
+        this.matriz = new int [2][2];
     }
 
 
@@ -38,7 +38,7 @@ public class Cuadrado {
         Random aleatorio = new Random();
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = aleatorio.nextInt((2)+1);
+                matriz[i][j] = aleatorio.nextInt((1)+1);
             }
         }
     }

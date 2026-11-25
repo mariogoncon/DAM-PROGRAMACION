@@ -35,7 +35,8 @@ public class Main {
                         if (cuadrado.esMagico()){
                             System.out.println();
                             System.out.println("¡¡El cuadrado generado es mágico!!");
-                            break;
+                            System.out.println("¡¡ENHORABUENA!!");
+
                         } else {
                             System.out.println();
                             System.out.println("El cuadrado generado no es mágico...");

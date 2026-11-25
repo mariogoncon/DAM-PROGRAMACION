@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c9826ab-4ab6-4072-8079-6bdea72d0a64" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../T8/CuadradoMagico/CuadradoMagico/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../T8/CuadradoMagico/CuadradoMagico/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../T8/CuadradoMagico/CuadradoMagico/src/model/Cuadrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../T8/CuadradoMagico/CuadradoMagico/src/model/Cuadrado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArraysList.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Apuntes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000000479392" />
+      <entry key="MS500" value="1.0087646425380519" />
+      <entry key="S2" value="1.4120229275218845" />
+      <entry key="S5" value="2.0310952659301957" />
+      <entry key="S10" value="2.4283126535676316" />
+      <entry key="S30" value="2.793837961145743" />
+      <entry key="S60" value="3.171373358339176" />
+      <entry key="M2" value="4.846191336581979" />
+      <entry key="M5" value="12.019101640610675" />
+      <entry key="M10" value="34.87291895006806" />
+      <entry key="M15" value="65.27141987810334" />
+      <entry key="M30" value="140.43811674012971" />
+      <entry key="H1" value="214.85996643159103" />
+      <entry key="H2" value="268.0259877814475" />
+      <entry key="H4" value="299.9193217415998" />
+      <entry key="D1" value="329.672496828948" />
+      <entry key="W1" value="335.0880564560486" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.502199406920438E-90" />
+      <entry key="S2" value="5.462086198352495E-23" />
+      <entry key="S5" value="1.976711627682632E-9" />
+      <entry key="S10" value="8.901098357881158E-5" />
+      <entry key="S30" value="0.1785207201877879" />
+      <entry key="S60" value="1.4017887159401625" />
+      <entry key="M2" value="4.466416487027202" />
+      <entry key="M5" value="11.964731014573722" />
+      <entry key="M10" value="19.871391136677047" />
+      <entry key="M15" value="24.462140584268088" />
+      <entry key="M30" value="30.85799516953042" />
+      <entry key="H1" value="35.00817382181665" />
+      <entry key="H2" value="37.38705993093665" />
+      <entry key="H4" value="38.662636419138416" />
+      <entry key="D1" value="39.7726682239715" />
+      <entry key="W1" value="39.96741337461232" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.4250166641210184E-10" />
+      <entry key="MS500" value="0.013576188055614459" />
+      <entry key="S2" value="0.6393952926161993" />
+      <entry key="S5" value="1.5686065073527666" />
+      <entry key="S10" value="2.1571334189870544" />
+      <entry key="S30" value="2.8682371151786614" />
+      <entry key="S60" value="4.5065685973379095" />
+      <entry key="M2" value="9.255499725824789" />
+      <entry key="M5" value="23.929609107203017" />
+      <entry key="M10" value="54.694946727850535" />
+      <entry key="M15" value="89.69065087894799" />
+      <entry key="M30" value="171.26704899056818" />
+      <entry key="H1" value="249.8509715849043" />
+      <entry key="H2" value="305.4036806733353" />
+      <entry key="H4" value="338.5770609565706" />
+      <entry key="D1" value="369.4443175057256" />
+      <entry key="W1" value="375.05534796205376" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3MWKPNr1xRBLIrSbM87WsNF8kTk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-ac68fc9d2b05-intellij.indexing.shared.core-IU-263.7307.200" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c9826ab-4ab6-4072-8079-6bdea72d0a64" name="Changes" comment="" />
+      <created>1795460861296</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1795460861296</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
