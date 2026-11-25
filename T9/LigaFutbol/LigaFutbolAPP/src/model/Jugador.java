@@ -77,7 +77,7 @@ public class Jugador {
         this.id = id;
         this.posicion = posicion;
         this.precio = precio;
-        this.habilidad=(int)Math.random()*(26)+60;
+        this.habilidad=(int)(Math.random()*26)+60;
         this.estrella = this.habilidad>87;
     }
 

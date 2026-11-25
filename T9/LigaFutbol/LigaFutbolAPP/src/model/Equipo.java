@@ -8,7 +8,7 @@ public class Equipo {
     //----------------ATRIBUTOS-----------------
 
     private String nombre;
-    private int presupuesto, media, puntos;
+    private int presupuesto, media, puntos, balancePresupuesto;
     private ArrayList<Jugador> plantilla = new ArrayList<>();
 
     public String getNombre() {
@@ -25,6 +25,14 @@ public class Equipo {
 
     public void setPresupuesto(int presupuesto) {
         this.presupuesto = presupuesto;
+    }
+
+    public int getBalancePresupuesto() {
+        return balancePresupuesto;
+    }
+
+    public void setBalancePresupuesto(int balancePresupuesto) {
+        this.balancePresupuesto = balancePresupuesto;
     }
 
     public int getMedia() {
@@ -66,6 +74,7 @@ public class Equipo {
             media+=item.getHabilidad();
         }
         this.puntos = 0;
+        this.balancePresupuesto = 0;
     }
 
     public Equipo(String nombre) {
@@ -73,6 +82,7 @@ public class Equipo {
         this.presupuesto = (int) (Math.random() * 250001) + 150000;
         this.media = 0;
         this.puntos = 0;
+        this.balancePresupuesto = 0;
     }
     //----------------MÉTODOS-----------------
 
@@ -81,16 +91,45 @@ public class Equipo {
         System.out.println("Presupuesto: " + this.presupuesto+"€");
         System.out.println("Media: " + this.media);
         System.out.println("Puntos: " + this.puntos);
+        System.out.println("Gasto en fichajes:  " + this.balancePresupuesto+"€");
         System.out.println();
     }
 
-    public void mostrarPlantilla() {}
+    public void mostrarPlantilla() {
+        System.out.println("PLANTILLA OFICIAL DEL "+this.nombre);
+        System.out.println("----------------------------------");
+        for (Jugador item : plantilla) {
+            System.out.println(item.getNombre());
+        }
+    }
 
     public void ficharJugador(Jugador jugador) {
         plantilla.add(jugador);
+        calcularMedia();
+        presupuesto = presupuesto- jugador.getPrecio();
+        balancePresupuesto+=jugador.getPrecio();
         System.out.println("El jugador " + jugador.getNombre()+" ha sido fichado por el "+this.nombre);
-        System.out.println("La operación se ha cerrado en: "+jugador.getPrecio()+"€");
+        System.out.println("|------------> La operación se ha cerrado en: "+jugador.getPrecio()+"€");
     }
 
-    public void venderJugador(){}
+    public void venderJugador(Jugador jugador) {
+        plantilla.remove(jugador);
+        calcularMedia();
+        presupuesto = presupuesto+ jugador.getPrecio();
+        balancePresupuesto-=jugador.getPrecio();
+        System.out.println("El jugador " + jugador.getNombre()+" ha sido vendido por el "+this.nombre);
+        System.out.println("|------------> La operación de venta se ha cerrado en: "+jugador.getPrecio()+"€");
+    }
+
+    public void calcularMedia() {
+        int suma=0;
+        for (Jugador item : plantilla) {
+            suma+=item.getHabilidad();
+        }
+        if (!plantilla.isEmpty()) {
+            this.media = suma/plantilla.size();
+        } else  {
+            this.media = 0;
+        }
+    }
 }
